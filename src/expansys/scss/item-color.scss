@@ -1,0 +1,15 @@
+//mixin color
+@mixin item-color($color:#000){
+    box-sizing: border-box;border:2px solid $color;
+    color:$color;
+    &:hover{background: $color !important;}
+}
+
+//oneplus 6
+$oneplus6-silkwhite:#d7b498;
+$oneplus6-midnight-black:#2a2a2a;
+$oneplus6-mirror-black:#090810;
+$oneplus6-red:#b0072b;
+
+//google daydream
+$daydream-color:#9ca3a9;

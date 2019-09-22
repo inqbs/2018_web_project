@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Expansys Korea : 얼리어답터와 Gadget Fan을 위한 온라인 직구 스토어</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/item-list.css">
+    <script src="js/jquery.min.js"></script>
+</head>
+<body>
+    <header>
+       <div class="container">
+            <div class="main_menu_area">
+                <div class="logo_area">
+                   <div class="logo_BG"><a href="index.html"></a></div>
+                    <ul class="main_menu">
+                      <li><a href="index.html"></a></li>
+                        <li><a href="smartphone.html">Cellphones</a></li>
+                        <li><a href="#">Tablet PC &amp; Laptop</a></li>
+                        <li><a href="wearable.html">Wearable Accessory</a></li>
+                        <li><a href="#">Audio</a></li>
+                        <li><a href="#">Camera</a></li>
+                        <li><a href="#">Others</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="right_area">
+                <div class="user_menu">
+                    <ul class="L2R">
+                        <li><a href="#">Sign in</a></li>
+                        <li><a href="#">Cart <span id="cart_item_no">(0)</span></a></li>
+                        <li><a href="#">Language  ▼</a></li>
+                    </ul>
+                </div>
+                <div class="searchbar_area">
+                    <span class="search_box">
+                        <input type="text" class="searchbar">
+                        <button class="schbtn" type="submit">
+                            <img src="img/search_icon.png" alt="검색">
+                        </button>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <div class="visual_box wear">
+        <div class="container">
+        </div>
+    </div>
+    
+    <div class="brand_box">
+        <div class="container">
+            <ul class="brand-list wear L2R">
+                <li><img src="img/wearable/vive.png" alt=""></li>
+                <li><img src="img/wearable/oculus.png" alt=""></li>
+                <li><img src="img/wearable/android_wear.png" alt=""></li>
+                <li><img src="img/wearable/fitbit.png" alt=""></li>
+                <li><img src="img/wearable/motorola.png" alt=""></li>
+                <li><img src="img/wearable/misfit.png" alt=""></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div id="section_box" class="container">
+        <nav class="subbar">
+            <div class="sub-search_box">
+                <input type="search" name="결과내검색" placeholder="결과내검색" id="item_search">
+            </div>
+            <section class="case on-stock">
+                <ul>
+                    <li>
+                        <h3>재고보유</h3>
+                    </li>
+                    <li class="md-checkbox">
+                        <input id="stock" type="checkbox">
+                        <label for="stock">재고있음</label>
+                    </li>
+                </ul>
+            </section>
+            <section class="case price">
+                <ul>
+                    <li>
+                        <h3>가격</h3>
+                    </li>
+                    <li class="md-checkbox">
+                        <input id="min-price" type="text"><span>~</span><input id="max-price" type="text">
+                    </li>
+                </ul>
+            </section>
+            <section class="case various">
+                <ul>
+                    <li>
+                        <h3>종류</h3>
+                    </li>
+                    <li class="md-checkbox">
+                        <input id="smartWatch" type="checkbox">
+                        <label for="smartWatch">스마트워치</label>
+                    </li>
+                    <li class="md-checkbox">
+                        <input id="smartBand" type="checkbox">
+                        <label for="smartBand">스마트밴드</label>
+                    </li>
+                    <li class="md-checkbox">
+                        <input id="vr" type="checkbox">
+                        <label for="vr">VR</label>
+                    </li>
+                    <li class="md-checkbox">
+                        <input id="others_wearable" type="checkbox">
+                        <label for="others_wearable">기타기기</label>
+                    </li>
+                </ul>
+            </section>
+            <section class="case others">
+                <ul>
+                    <li>
+                        <h3>기타옵션</h3>
+                    </li>
+                    <li class="md-checkbox">
+                        <input id="blutooth" type="checkbox">
+                        <label for="blutooth">블루투스</label>
+                    </li>
+                    <li class="md-checkbox">
+                        <input id="gps" type="checkbox">
+                        <label for="gps">GPS</label>
+                    </li>
+                    <li class="md-checkbox">
+                        <input id="IPnx" type="checkbox">
+                        <label for="IPnx">방수방진</label>
+                    </li>
+                    <li class="md-checkbox">
+                        <input id="sim" type="checkbox">
+                        <label for="sim">SIM</label>
+                    </li>
+                    <li class="md-checkbox">
+                        <input id="outdoor" type="checkbox">
+                        <label for="outdoor">야외활동 특화</label>
+                    </li>
+                </ul>
+            </section>
+            <a href="#" class="btn"><span>옵션 적용 재검색</span></a>
+        </nav>
+        <section class="item_list_area">
+            <header>
+                <span class="site-nav">HOME › CELLPHONE</span>
+                <span class="item-sort"><button><img src="img/sort-icon.png" alt=""></button><span>평점높은순</span><button><img src="img/tobottom.png" alt=""></button></span>
+                <a href="" class="btn"><span>상품비교</span></a>
+            </header>
+            <div class="row">
+                <ul class="item-list L2R">
+                       <!-- 1행-->
+                        <li><a href="#">
+                                <div class="item-photo"><img src="img/wearable/mad_gaze_ares_AR.png" alt=""></div>
+                                <div class="item-prodoct">
+                                    <h5>Mad Gaze Ares AR Smart Glass</h5>
+                                </div>
+                                <div class="item-price no-sale"><span class="sale"></span><span class="price">288.96</span></div>
+                            </a></li>
+                        <li><a href="#">
+                                <div class="item-photo"><img src="img/wearable/mad_gaze_ares_and_XD_Design_Bobby_BIZZ.png" alt=""></div>
+                                <div class="item-prodoct">
+                                    <h5>Mad Gaze Ares + XD Design Bobby BIZZ</h5>
+                                </div>
+                                <div class="item-price no-sale"><span class="sale"></span><span class="price">386.75</span></div>
+                            </a></li>
+                        <li> 
+                          <a href="#">
+                               <div class="item-photo">
+                                   <img src="img/wearable/skagen_connected_mens.png" alt="">
+                               </div>
+                               <div class="item-prodoct">
+                                   <h5>Skagen Connected Men's Hobby</h5>
+                               </div>
+                               <div class="item-price no-sale"><span class="sale"></span><span class="price">149.99</span></div>
+                           </a>
+                       </li>
+                        <!-- 2행-->
+                       <li><a href="#">
+                                <div class="item-photo"><img src="img/wearable/fitbit_charge.png" alt=""></div>
+                                <div class="item-prodoct">
+                                    <h5>Fitbit Charge Wireless Activity</h5>
+                                </div>
+                                <div class="item-price"><span class="sale">105.95</span><span class="price">89.30</span></div>
+                            </a></li>
+                        <li><a href="#">
+                                <div class="item-photo"><img src="img/wearable/fitbit_blaze_smart.png" alt=""></div>
+                                <div class="item-prodoct">
+                                    <h5>Xiaomi Redmi Note 5 (64GB/Gold)</h5>
+                                </div>
+                                <div class="item-price"><span class="sale">199.95</span><span class="price">169.70</span></div>
+                            </a></li>
+                        <li> 
+                          <a href="#">
+                               <div class="item-photo">
+                                   <img src="img/wearable/moto360_sport.png" alt="">
+                               </div>
+                               <div class="item-prodoct">
+                                   <h5>Moto 360 Sport</h5>
+                               </div>
+                               <div class="item-price no-sale"><span class="sale"></span><span class="price">289.00</span></div>
+                           </a>
+                       </li>
+                       <!-- 3행-->
+                       <li><a href="#">
+                                <div class="item-photo"><img src="img/wearable/sony_smartband_SWR12.png" alt=""></div>
+                                <div class="item-prodoct">
+                                    <h5>Sony Smartband 2 SWR12</h5>
+                                </div>
+                                <div class="item-price"><span class="sale">134.68</span><span class="price">50.18</span></div>
+                            </a></li>
+                        <li><a href="#">
+                                <div class="item-photo"><img src="img/wearable/nokia_WithingsGo.png" alt=""></div>
+                                <div class="item-prodoct">
+                                    <h5>Nokia / Withings Go Activity</h5>
+                                </div>
+                                <div class="item-price no-sale"><span class="sale"></span><span class="price">50.50</span></div>
+                            </a></li>
+                        <li> 
+                          <a href="#">
+                               <div class="item-photo">
+                                   <img src="img/wearable/fitbit_surge.png" alt="">
+                               </div>
+                               <div class="item-prodoct">
+                                   <h5>Fitbit Surge Fitness Superwearable</h5>
+                               </div>
+                               <div class="item-price no-sale"><span class="sale"></span><span class="price">152.95</span></div>
+                           </a>
+                       </li>
+                </ul>
+            </div>
+            
+            <div class="row item_banner daydream_banner">
+                <a href="item_daydream_google.html"></a>
+            </div>
+            
+            <div class="row">
+                <ul class="item-list L2R">
+                       <!-- 1행-->
+                        <li><a href="#">
+                                <div class="item-photo"><img src="img/wearable/playstationVR.png" alt=""></div>
+                                <div class="item-prodoct">
+                                    <h5>PlayStation VR</h5>
+                                </div>
+                                <div class="item-price"><span class="sale">209.00</span><span class="price">199.99</span></div>
+                            </a></li>
+                        <li><a href="#">
+                                <div class="item-photo"><img src="img/wearable/htc_vive.png" alt=""></div>
+                                <div class="item-prodoct">
+                                    <h5>HTC VIVE Pro</h5>
+                                </div>
+                                <div class="item-price no-sale"><span class="sale"></span><span class="price">1,399.25</span></div>
+                            </a></li>
+                        <li> 
+                          <a href="#">
+                               <div class="item-photo">
+                                   <img src="img/wearable/occulusGo.png" alt="">
+                               </div>
+                               <div class="item-prodoct">
+                                   <h5>Oculus Go Standalone 64gb</h5>
+                               </div>
+                               <div class="item-price no-sale"><span class="sale"></span><span class="price">249.99</span></div>
+                           </a>
+                       </li>
+                        <!-- 2행-->
+                       <li><a href="item_daydream_google.html">
+                                <div class="item-photo"><img src="img/wearable/daydream_view.png" alt=""></div>
+                                <div class="item-prodoct">
+                                    <h5>Google Daydream View</h5>
+                                </div>
+                                <div class="item-price"><span class="sale">59.99</span><span class="price">41.59</span></div>
+                            </a></li>
+                </ul>
+            </div>
+            
+            <div class="row morebtn">
+                <a href="#"><span>SHOW MORE</span></a>
+            </div>
+            
+        </section>
+    </div>
+    
+    <footer>
+        <div class="container">
+           <div class="logo_footer">
+                <img src="img/logo.png" alt="">
+            </div>
+            <div class="credit">
+                <ul class="L2R">
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#">전자금융거래약관</a></li>
+                    <li><a href="#">개인정보처리방침</a></li>
+                    <li><a href="#">청소년보호정책</a></li>
+                </ul><br />
+                <address>문의: Info@EXPANSYS.com     |     법인 고객용 문의: KR-GROUP@EXPANSYS.COM</address><br />
+                <span class="copyright">2018 EXPANSYS Limited</span>
+            </div>
+        </div>
+    </footer>
+    <script src="js/menu_slide.js"></script>
+</body>
+</html>

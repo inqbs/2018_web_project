@@ -1,0 +1,43 @@
+.bn-visual{width: 100%;max-width:1860px;height: 640px;background: url('../img/visual02.jpg') no-repeat 15% 15%;text-align: center;transition: all 0.3s;-webkit-transition: all 0.3s;-o-transition: all 0.3s;}
+.bn-big{width: 100%;max-width: 1860px;}
+.bn-sm{position: relative;width: calc(50% - 15px);height:20vw;float:left;}
+.bn-sm-1{margin-right:15px;background: url('../img/dl-sm-01.png') no-repeat center center;background-size:cover;transition: all 0.3s;-webkit-transition: all 0.3s;-o-transition: all 0.3s;}
+.bn-sm-2{margin-left:15px;background: url('../img/dl-sm-02.png') no-repeat center center;background-size:cover;}
+
+.bn-visual h3{text-align: center;padding-top:3vw;font-size:calc(1em + 2.2vw);}
+.bn-visual span{font-size:calc(0.2em + 0.8vw);}
+.download-list li{float:left;display: block;width: 30%;height:250px;margin-top: 4vw;border-right: 1px solid #fff;vertical-align: middle;padding:0 1.5%;padding-top: 20px;}
+.download-list li:first-child{display:inline-block;}
+.download-list li:last-child{border-right:none;padding-top: 0;}
+.download-list .os-icon{width: 100px;}
+.download-list h5{font-size: 2em;}
+.download-list a, .download-list a:visited{color:#fff;}
+.download-list [class*="support-"]{text-align:left;margin-bottom: 3vw;}
+.download-list [class*="support-"] h5{font-size:1.5em;line-height:2em;}
+.download-list [class*="support-"] span{font-size:1em;line-height:1.5em;}
+
+.visual_txt_box{position: relative;color:#fff;width: 800px;height:100%;margin: 0 auto;vertical-align: middle;}
+.visual_txt_box h2{padding:110px 0 25px;}
+.visual_txt_box img{width: 30vw;}
+.btn{display: inline-block;margin-top: 20px;width: 200px;height:65px;text-align: center;border:2px solid #fff;line-height: 60px;border-radius: 300px;box-sizing: border-box;}
+.btn, .btn:visited{color:#fff;transition: all 0.2s;font-weight: bold;}
+.btn:hover{color:#000;background: #fff;}
+.btn:hover span{color:#000;}
+.btn > span{vertical-align: middle;}
+.white-bg h3{color:#111;}
+.white-bg .btn{border:2px solid #111;}
+.white-bg .btn, .white-bg .btn:visited{color:#111;}
+.white-bg div > span{color:#111;}
+.white-bg .btn:hover{color:#fff;background: #000;font-weight: bold;}
+
+.main_txt_box{position: relative;color:#fff;vertical-align: middle;height:100%;width: 40%;}
+.main_txt_box h3{padding-top:calc(35% - 2.2em);font-size:calc(1em + 2.2vw);}
+.main_txt_box > span{font-size:calc(0.2em + 0.8vw);line-height: 1.7em;}
+.bn-sm{background-size:100% 100%;transition: all 0.3s;-webkit-transition: all 0.3s;-o-transition: all 0.3s;}
+.bn-sm .main_txt_box{margin-left:4vw;}
+.bn-sm .main_txt_box h3{padding-top:calc(50% - 2.2em);font-size:2.2em;}
+.bn-sm:hover{background-size:110% 110%;transition: all 0.3s;-webkit-transition: all 0.3s;-o-transition: all 0.3s;}
+
+.bn-big-1 .main_txt_box{float:right;text-align: right;margin-right: 5vw;}
+.bn-big-2 .main_txt_box, .bn-big-4 .main_txt_box{float:left;text-align: left;margin-left: 5vw;}
+.bn-sm-1.white-bg:hover h3, .bn-sm-1.white-bg:hover span{color:#fff;}

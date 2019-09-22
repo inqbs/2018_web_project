@@ -1,0 +1,22 @@
+$main_deepBlue: #06509f;
+$main_blue: #0092d3;
+$main_red: #e91d24;
+$div_align_center: 0 auto;
+$font-default: 'NanumSquare','Nanum Square', 'Noto Sans CJK KR', sans-serif;
+$font-letter: -1.5pt;
+$border-1px: 1px solid;
+
+@mixin list-item-border($color: #fff, $padding-list: 0px,){
+    display: block;padding-left:$padding-list;
+    &:first-child{padding:0;}
+    &:last-child{&:after{content:none;}}
+    &:after{content:"|";color:$color;padding-left: $padding-list;}
+    a{color:$color;}
+} //'|'로 구분되는 리스트 아이템
+
+@mixin transition($sec){
+    -moz-transition: $sec all;
+    -o-transition: $sec all;
+    -webkit-transition: $sec all;
+    transition: $sec all;
+}

@@ -1,0 +1,80 @@
+@import "global";
+
+//header
+
+header{height:180px;background: $main-deep;box-shadow: $material-shadow-normal;
+    .container{height: 100%;}
+    .main_menu_area{float:left;}
+    .logo_area{
+        width: 380px;height: 180px;
+        .logo_BG{width: 100%;height: 100%;background: $main-deep url(../img/logo.png) 30px center no-repeat;
+             &.active{z-index:765;}
+        }
+        a{display: block;width: 100%;height: 80%;}
+    }
+    .main_menu_box{z-index:1;}
+}
+.main_menu{
+    margin-top: -648px;
+    transition: $material-animation;
+    box-shadow: $material-shadow;
+    li{
+        background: $white;
+        display: block;
+        position: relative;
+        z-index: -1;
+        height: 72px;
+        line-height: 72px;
+        padding:0 30px;
+        border-left:5px solid rgba($main-deep,0);
+        box-sizing: border-box;
+        transition: $material-animation;
+        a{vertical-align: middle;color:$font-gray;letter-spacing: $global-LS-EN;opacity: 0;}
+        &:after{content:"›";color:$font-gray;position: absolute;top: 0;right: 30px;}
+        &:hover{border-left:5px solid $main-deep;
+            a{color:$main-deep;}
+            &:after{color:$main-deep;}
+        }
+        &:first-child{background: none;height: 180px + 36;border:none;
+            a{width: 100%;height: 100%;}
+            &:after{content:"";}
+        }
+    }
+    &.active{margin-top:-180px - 36;
+        li{z-index:1;a{opacity: 1;}}
+    }
+}
+
+.right_area{float:right;}
+.user_menu{float:right;margin-top: 25px;
+    li{display: block;letter-spacing: $global-LS-EN;font-size: 14px;
+        a{color:$font-gray;}
+        &:after{content:"|";margin:0 10px;}
+        &:last-child::after{content:"";margin: 0;}
+    }
+}
+
+.searchbar_area{clear:both;float:right;margin-top: 12px;}
+.search_box{display: inline-flex;background: $white;height: 50px;border-radius: 300px;box-shadow:0px 2px rgba(0,0,0,.25);align-items: center;}
+.searchbar{width: 320px;height: 36px;vertical-align: middle;border:none;font-size:1em;padding: 7px 25px;background: none;}
+.schbtn{width: 18px;height: 18px;margin: 0 20px 0 -20px;border:0;background: none;cursor:pointer;line-height:18px;
+    img{width: 100%;height: 100%;vertical-align: middle;}
+}
+
+//footer
+
+footer{background: $main-deep;height: 200px;color:$white;
+    a{color:$white !important;}
+    .container > div{float:left;}
+    .logo_footer{margin-top: 100px - 64/2;width: 244px;height: 70px;margin-right: 125px;
+        img{width: 200px;}
+    }
+}
+.credit{
+    line-height: 24px;font-size: 14px;margin-top: 48px;
+    li{
+        margin-right: 15px;display: inline-block;
+        &:after{content:"|";margin-left: 15px;}
+        &:last-child::after{content:"";}
+    }
+}

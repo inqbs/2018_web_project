@@ -1,0 +1,93 @@
+@import "global.scss"; 
+$list-shadow:0 5px 6px rgba(0,0,0,0.1), 0 5px 3px rgba(0,0,0,0.1);
+$item-after:25px solid;
+$skt_color:#ff7a00;
+$kt_color:#203257;
+//sass 정의요소
+
+body > header{height: 200px;}
+
+//left_menu
+.left_menu{
+    width: 224px;
+    margin-right: 32px;
+    h3{font-size: 24pt;font-weight: bold;color: $main_deepBlue;height: 48px;margin-bottom: 0;}
+    float: left;
+}
+.menu_header{
+    border-bottom: 2px solid $main_deepBlue;
+}
+.left_menu_list  {
+    margin-top: 24px;
+    ul{list-style:square;}
+    li{float:none;margin-left: 20px;font-size: 18px;line-height:18px + 20px;
+        a{color:#000;
+        }
+    background: url(../img/angle_right.png) center right no-repeat;
+    }
+}
+
+
+//plan_area
+.plan_area{float: right;width: 944px;}
+.section_header{
+    width: 1200px - 224 - 32;height: 130px;
+    h3{font-size: 24pt;color: $main_deepBlue;display: block;border-bottom: 1px solid $main_deepBlue;height: 48px;}
+    .carrier_btn_content{
+        li{display: block;width: 50%;text-align: center;font-size: 18pt;height: 48px;margin-top: 24px;border-bottom: 2px solid #ddd;
+            a{color: #ddd;}
+        &:first-child:hover, &.is-active:first-child{border-bottom-color:$skt_color;a{color:$skt_color;}}
+        &:last-child:hover, &.is-active:last-child{border-bottom-color:$kt_color;a{color:$kt_color;}} 
+        }
+    }
+}
+
+.carrier_Panel{display: none;}
+
+.recommand_list{
+    height: 180px;
+    margin: 16px 0 24px;
+    > ul > li{display: block;box-sizing: border-box;width: 300px;height: 180px;border:1px solid #dedede;margin-right: 22px;border-radius: 8px;text-align: center;
+        &:last-child{margin-right: 0;}
+        div{display: block;margin:20px auto;}
+    }
+    a{color:#444;}
+}
+.plan_title{font-size: 18px;img{margin-right: 0.5em;}}
+.plan_deal{
+    height: 51px;width: 48px *3 +40;
+    li{width: 48px;margin-right: 20px;&:last-child{margin-right: 0;}}
+    span{display: block;margin-top: 8px;}
+}
+.plan_price{font-size: 16px;text-align: right;width: 262px;
+    strong{font-size: 20px;
+    margin: 0 3px;}
+}
+
+.plan_list_area{border-top: 2px solid #888;height:auto;
+    article{box-sizing: border-box;overflow:hidden;height:auto;border:1px solid #b7b7b7;}
+    .area_header{width: 402px;float: left;padding: 25px;
+        img{float:left;}
+        .area_header_txt{float: left;width: 250px;margin-left: 30px;}
+        h4{font-size: 20pt;margin-top: 0;}
+        p{font-size: 12pt;text-align:justify;}
+        p.small{font-size:12px;letter-spacing: -0.5px;}
+    }
+}
+.plan_list{
+    width: 540px;float: right;border-left:1px solid #b7b7b7;
+    table{text-align: center;}
+    tr{border-bottom: 1px solid #eee;box-sizing:border-box;
+        &:first-child{height: 32px;background: #ddd;
+            td{font-weight: bold;}
+        }
+    }
+    td{
+        width: 70px;height: 48px;font-size: 12pt;
+        &:first-child{width: 190px;}
+        &:last-child{width: 140px;}
+        &.small{font-size: 12px;}
+    }
+}
+
+footer{margin-top: 60px;}

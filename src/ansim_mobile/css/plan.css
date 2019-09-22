@@ -1,0 +1,167 @@
+body > header {
+  height: 200px; }
+
+.left_menu {
+  width: 224px;
+  margin-right: 32px;
+  float: left; }
+  .left_menu h3 {
+    font-size: 24pt;
+    font-weight: bold;
+    color: #06509f;
+    height: 48px;
+    margin-bottom: 0; }
+
+.menu_header {
+  border-bottom: 2px solid #06509f; }
+
+.left_menu_list {
+  margin-top: 24px; }
+  .left_menu_list ul {
+    list-style: square; }
+  .left_menu_list li {
+    float: none;
+    margin-left: 20px;
+    font-size: 18px;
+    line-height: 38px;
+    background: url(../img/angle_right.png) center right no-repeat; }
+    .left_menu_list li a {
+      color: #000; }
+
+.plan_area {
+  float: right;
+  width: 944px; }
+
+.section_header {
+  width: 944px;
+  height: 130px; }
+  .section_header h3 {
+    font-size: 24pt;
+    color: #06509f;
+    display: block;
+    border-bottom: 1px solid #06509f;
+    height: 48px; }
+  .section_header .carrier_btn_content li {
+    display: block;
+    width: 50%;
+    text-align: center;
+    font-size: 18pt;
+    height: 48px;
+    margin-top: 24px;
+    border-bottom: 2px solid #ddd; }
+    .section_header .carrier_btn_content li a {
+      color: #ddd; }
+    .section_header .carrier_btn_content li:first-child:hover, .section_header .carrier_btn_content li.is-active:first-child {
+      border-bottom-color: #ff7a00; }
+      .section_header .carrier_btn_content li:first-child:hover a, .section_header .carrier_btn_content li.is-active:first-child a {
+        color: #ff7a00; }
+    .section_header .carrier_btn_content li:last-child:hover, .section_header .carrier_btn_content li.is-active:last-child {
+      border-bottom-color: #203257; }
+      .section_header .carrier_btn_content li:last-child:hover a, .section_header .carrier_btn_content li.is-active:last-child a {
+        color: #203257; }
+
+.carrier_Panel {
+  display: none; }
+
+.recommand_list {
+  height: 180px;
+  margin: 16px 0 24px; }
+  .recommand_list > ul > li {
+    display: block;
+    box-sizing: border-box;
+    width: 300px;
+    height: 180px;
+    border: 1px solid #dedede;
+    margin-right: 22px;
+    border-radius: 8px;
+    text-align: center; }
+    .recommand_list > ul > li:last-child {
+      margin-right: 0; }
+    .recommand_list > ul > li div {
+      display: block;
+      margin: 20px auto; }
+  .recommand_list a {
+    color: #444; }
+
+.plan_title {
+  font-size: 18px; }
+  .plan_title img {
+    margin-right: 0.5em; }
+
+.plan_deal {
+  height: 51px;
+  width: 184px; }
+  .plan_deal li {
+    width: 48px;
+    margin-right: 20px; }
+    .plan_deal li:last-child {
+      margin-right: 0; }
+  .plan_deal span {
+    display: block;
+    margin-top: 8px; }
+
+.plan_price {
+  font-size: 16px;
+  text-align: right;
+  width: 262px; }
+  .plan_price strong {
+    font-size: 20px;
+    margin: 0 3px; }
+
+.plan_list_area {
+  border-top: 2px solid #888;
+  height: auto; }
+  .plan_list_area article {
+    box-sizing: border-box;
+    overflow: hidden;
+    height: auto;
+    border: 1px solid #b7b7b7; }
+  .plan_list_area .area_header {
+    width: 402px;
+    float: left;
+    padding: 25px; }
+    .plan_list_area .area_header img {
+      float: left; }
+    .plan_list_area .area_header .area_header_txt {
+      float: left;
+      width: 250px;
+      margin-left: 30px; }
+    .plan_list_area .area_header h4 {
+      font-size: 20pt;
+      margin-top: 0; }
+    .plan_list_area .area_header p {
+      font-size: 12pt;
+      text-align: justify; }
+    .plan_list_area .area_header p.small {
+      font-size: 12px;
+      letter-spacing: -0.5px; }
+
+.plan_list {
+  width: 540px;
+  float: right;
+  border-left: 1px solid #b7b7b7; }
+  .plan_list table {
+    text-align: center; }
+  .plan_list tr {
+    border-bottom: 1px solid #eee;
+    box-sizing: border-box; }
+    .plan_list tr:first-child {
+      height: 32px;
+      background: #ddd; }
+      .plan_list tr:first-child td {
+        font-weight: bold; }
+  .plan_list td {
+    width: 70px;
+    height: 48px;
+    font-size: 12pt; }
+    .plan_list td:first-child {
+      width: 190px; }
+    .plan_list td:last-child {
+      width: 140px; }
+    .plan_list td.small {
+      font-size: 12px; }
+
+footer {
+  margin-top: 60px; }
+
+/*# sourceMappingURL=plan.css.map */

@@ -1,0 +1,153 @@
+@import 'global';
+@import 'material-chkbox';
+
+body > header{box-shadow: $material-shadow-deep;}
+
+.visual_box{height: 495px;
+    &.phone{background: url('../img/smartphone/visual.png') center center no-repeat;}
+    &.wear{background: url('../img/wearable/visual.png') center center no-repeat;}
+}
+
+.brand_box{
+    background: linear-gradient(to right,#3e4954,#6e707c,#3e4954);height: 125px;display:flex;align-items: center;
+    .brand-list{
+        display: flex;justify-content: space-around;flex-direction: row;
+        li{
+            img{vertical-align: middle;}
+        }
+        &.phone li{line-height: 55px;}
+        &.wear li{line-height: 104px;}
+    }
+}
+
+#section_box{display: flex;justify-content: space-between;}
+
+.subbar{
+    position: absolute;width: 450px;box-sizing: border-box;border: 3px solid $sub-deep;overflow-y:scroll;-ms-overflow-style: none;
+    &::-webkit-scrollbar{display:none;}
+    section{margin: 25px;background: $white;border-bottom: 1px solid $sub-deep;
+        h3{font-size: 24px;color:$sub-deep;line-height: 45px;}
+//        &.others{border:0;}
+        &:nth-of-type(n+3) {
+            h3:after{content:"열기";float: right;font-size: 16px;font-weight: normal;vertical-align: middle;}
+            h3.opened:after{content:"닫기";}
+            li:nth-of-type(n+2){display:none;}
+        }
+    }
+    .sub-search_box{height: 97px;background: $sub-deep;display: flex;align-items: center;justify-content: space-between;text-align: center;
+        input{width: 400px;height: 50px;margin:0 20px;border-radius: 300px;border:0;padding:0 28px;color:$sub-deep;font-size: 18px;}
+    }
+    .price{
+        input{width: calc(50% - 14.45px);border:0;border-bottom: 1px solid $main-deep;padding: 8px;}
+        span{padding: 0 10px;}
+    }
+    .search{
+        position: absolute;bottom: 0;width: 100%;
+    }
+    .btn{display: block;width: 100%;height: 90px;background: $sub-deep;color:$white;font-weight: bold;font-size: 32px;display: flex;justify-content: center;align-items: center;flex-direction: row;}
+}
+
+.item_list_area{
+    width: calc(100% - 450px - 26px);
+    margin-left: 26px + 450;
+    header{background: $white;height: 100px;display:flex;align-items: center;flex-direction: row;font-size: 18px;color:$sub-deep;box-shadow: none;
+        span{line-height: 40px;vertical-align: middle;}
+        .site-nav{width: 566px;}
+        .item-sort{width: 180px;display:flex;justify-content: space-around;}
+        .btn{height: 40px;line-height: 40px;border-radius: 4px;background: $sub-deep;width: 150px;text-align: center;color:$white;margin-left: 28px;
+            span{vertical-align: inherit;}
+        }
+    }
+    button{border:none;background: none;vertical-align: middle;line-height: 22px;
+        img{vertical-align: middle;}
+    }
+}
+
+.item-list{
+    display: -webkit-flex;display: -moz-flex;display: -ms-flex;display: -o-flex;display: flex;-webkit-box-pack: justify;-ms-flex-pack: justify;justify-content: space-between;flex-wrap: wrap;-ms-flex-line-pack: justify;align-content: space-between;
+    li{
+        background: $white;
+        max-width: 287px;
+        margin-bottom: 34px;
+        &:last-child{margin-right: 0;}
+        a{@include link-fullsize;box-shadow:$material-shadow;}
+        .item-photo{
+            width: 287px;height: 287px;position: relative;text-align: center;line-height: 287px;overflow: hidden;
+            img{
+                vertical-align: middle;
+                transition: $material-animation;
+                max-height:200px;
+                &.full{
+                    max-height: initial;
+                    max-height: auto;
+                }
+            }
+            &:hover img{
+                transform: scale(1.1, 1.1);
+            }
+            .item-sale{
+                position: absolute;
+                bottom: 20px;
+                right: 20px;
+                width: 72px;
+                height: 72px;
+                border-radius: 300px;
+                background: #e2361a;
+                box-sizing: border-box;
+                padding: 12px 0;
+                transform: rotate(-15deg);
+                p{font-size: 18px;font-weight: bold;line-height: 24px;color:$white;
+                    &:after{content:"\Aoff";white-space: pre ;}
+                }
+            }
+        }
+        .item-prodoct{
+            height: 55px;
+            h5{font-size: 20px;font-weight: normal;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;padding-top: 8px;}
+            box-sizing: border-box;
+            text-align: left;
+            padding:0 16px;
+        }
+        .item-price{
+            height: 75px;
+            box-sizing: border-box;
+            text-align: right;
+            padding: 0 10px 10px;
+            span{display: block;
+                &:before{content:"USD "}
+            }
+            .sale{color: $discounted;font-size: 20px;line-height: 20px;text-decoration:line-through;}
+            .price{color: $main-vivid;font-size: 32px;font-weight: bold;line-height: 36px;}
+        }
+        .item-deal-progress{
+            height: 35px;box-sizing: border-box; padding: calc(35px/2 - 2px) 16px;border-radius: 0 0 10px 10px;overflow: hidden;position: relative;
+            .progress-area{
+                width: 184px;height:4px;border-radius: 15px;background: #eee;position: relative;
+                .progress{
+                    height:4px;width: 100%;border-radius: 15px;position: absolute;
+                }
+            }
+            .progress-timer{
+                    position: absolute;font-size: 12px;top:calc(50% - 9px);right: 12px;
+                }
+        }
+    }
+    .item-price.no-sale .sale{text-decoration: none;&:before{content:"　";}}
+    .item-price.tba span{font-size: 24px;&:before{content:"　";}}
+}
+
+.item_banner{
+    height: 215px;margin-bottom: 34px;
+    background-size:102%;
+    box-shadow: $material-shadow;
+    a{@include link-fullsize;}
+}
+.oneplus_banner{background: url(../img/smartphone/oneplus_banner.png) center center no-repeat;}
+.daydream_banner{background: url(../img/wearable/daydream_banner.png) center center no-repeat;}
+
+.morebtn{
+    height: 90px;background: $sub-deep;margin-bottom: 28px;
+    a{@include link-fullsize;display: flex;align-items: center;justify-content: center;
+        span{color:$white;font-weight: bold;font-size: 32px;}
+    }
+}

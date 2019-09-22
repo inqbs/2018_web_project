@@ -1,0 +1,254 @@
+@import 'global';
+@import 'item-color'; 
+
+.silkwhite{@include item-color($oneplus6-silkwhite)}
+.midnight-black{@include item-color($oneplus6-midnight-black)}
+.mirror-black{@include item-color($oneplus6-mirror-black)}
+.red{@include item-color($oneplus6-red)}
+.daydream-color{@include item-color($daydream-color)}
+
+//header
+
+.sub-header{height: 60px;line-height: 60px;z-index: -6;
+    span{vertical-align: middle;}
+}
+
+#oneplus-6{.image-box{background: url(../img/smartphone/item/item_oneplus6.png);}}
+#daydream-view{.image-box{background: url(../img/wearable/item/item_daydream.png);}}
+
+.item-area{display:flex;justify-content: space-between;flex-wrap:wrap;align-content: space-between;
+    .image-box{width: 700px;height: 700px;box-shadow: $material-shadow;z-index:-5;}
+    .item-info{width: 660px;height: 700px;position: relative;
+        > ul > li{clear:both;letter-spacing: -1.3px;
+            &:before{display: block;font-size: 28px;font-weight: bold;float: left;width: 116px;text-transform:capitalize}
+            &:nth-child(n+4){line-height: 100px;}
+        }
+        .brand{font-size: 24px;}
+        .name{line-height: 72px;margin-bottom: 60px;
+            h3{font-size: 64px;font-weight: bold;vertical-align: top;}
+        }
+        .price-area{height: 100px;
+            &:before{content:"price";}
+            li{width: 535px;float: right;margin-top: -15px;
+                &:before{content:"USD ";}
+            }
+            .price{font-size: 48px;font-weight: bold;}
+            .shipping{font-size: 28px;color:$font-gray;
+                &:before{content:"+ USD ";}
+                &:after{content:" Shipping";}
+            }
+        } 
+        
+        .color{display:flex;justify-content: flex-start;align-items:center;align-content:flex-start;
+            &:before{content:"color";}
+            & > div{width: 72px; line-height: 60px; @include div-btn(24px)}
+        }
+        .size{display:flex;justify-content: flex-start;align-items:center;align-content:flex-start;
+            &:before{content:"size";}
+            & > div{
+                width: 130px;line-height: 30px;box-sizing: border-box;color:$main-light; border:2px solid $main-light;@include div-btn(18px);
+                    &:hover{background: $main-light;}
+                }
+        }
+        .stock{margin-bottom: 32px;font-size: 18px;
+            &:before{content:"stock";}
+            .pre-purchase-date:after{content:"부터 발송 시작";}
+        }
+    }
+    .purchase-nav{position: absolute;bottom: 0;}
+    .purchase-btn{height: 100px;line-height: 100px;
+            div{float:left;text-align: center;font-weight: bold;}
+            a{@include link-fullsize;color:$white;font-size: 28px;}
+            .cart{width: 275px;background: $main-vivid;}
+            .direct_purchase{width: 275px;background:  $sub-deep;}
+            .favorite{width: 110px;background: $main-deep;}
+        }
+    
+    .suggest{width: 1400px;height: 400px;margin: 60px 0;
+        .suggest-title{width: 400px;height: 400px;background: url(../img/together_banner.png);float: left;margin-right: 60px;}
+        .item-list{
+            float:left;
+            li{
+                background: $white;
+                margin-right:20px;
+                max-width: 300px;
+                &:last-child{margin-right: 0;}
+                a{@include link-fullsize;box-shadow:$material-shadow;}
+                .item-photo{
+                    width: 300px;height: 270px;position: relative;text-align: center;line-height: 270px;overflow: hidden;
+                    img{
+                        vertical-align: middle;
+                        transition: $material-animation;
+                        max-height:200px;
+                        &.full{
+                            max-height: initial;
+                            max-height: auto;
+                        }
+                    }
+                    &:hover img{
+                        transform: scale(1.1, 1.1);
+                    }
+                    .item-sale{
+                        position: absolute;
+                        bottom: 20px;
+                        right: 20px;
+                        width: 72px;
+                        height: 72px;
+                        border-radius: 300px;
+                        background: #e2361a;
+                        box-sizing: border-box;
+                        padding: 12px 0;
+                        transform: rotate(-15deg);
+                        p{font-size: 18px;font-weight: bold;line-height: 24px;color:$white;
+                            &:after{content:"\Aoff";white-space: pre ;}
+                        }
+                    }
+                }
+                .item-prodoct{
+                    height: 55px;
+                    h5{font-size: 24px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;padding-top: 8px;font-weight: normal;}
+                    box-sizing: border-box;
+                    text-align: left;
+                    padding:0 16px;
+                }
+                .item-price{
+                    height: 75px;
+                    box-sizing: border-box;
+                    text-align: right;
+                    padding: 0 10px 10px;
+                    span{display: block;
+                        &:before{content:"USD "}
+                    }
+                    .sale{color: $discounted;font-size: 24px;line-height: 24px;text-decoration:line-through;}
+                    .price{color: $main-vivid;font-size: 36px;font-weight: bold;line-height: 36px;}
+                }
+                .item-deal-progress{
+                    height: 35px;box-sizing: border-box; padding: calc(35px/2 - 2px) 16px;border-radius: 0 0 10px 10px;overflow: hidden;position: relative;
+                    .progress-area{
+                        width: 184px;height:4px;border-radius: 15px;background: #eee;position: relative;
+                        .progress{
+                            height:4px;width: 100%;border-radius: 15px;position: absolute;
+                        }
+                    }
+                    .progress-timer{
+                            position: absolute;font-size: 12px;top:calc(50% - 9px);right: 12px;
+                        }
+                }
+            }
+            .item-price.no-sale .sale{text-decoration: none;&:before{content:"　";}}
+            .item-price.tba span{font-size: 24px;&:before{content:"　";}}
+        }
+    }
+}
+
+.detail_area{position: relative;display: block;
+    .container{display: -webkit-flex;display: -moz-flex;display: -ms-flex;display: -o-flex;display: flex;justify-content: space-between;}
+}
+
+.detail-header{
+    box-sizing:border-box;box-shadow: $material-shadow-normal;height: 100px;position: relative;z-index: 50;top: 0;background: $white;
+}
+
+.detail-area_btn{
+    height: 100px;width: 300px;float:left;line-height: 100px;text-align: center;transition: $material-animation;
+    a{vertical-align: middle;font-size: 28px;font-weight: bold;}
+    &:hover, &.active{border-bottom: 5px solid $main-vivid;a{color:$main-vivid;};}
+}
+
+.detail_panel{height: auto;margin-bottom: 60px;
+    > div {width: 1055px;margin: 0;box-sizing: border-box;padding: 40px 60px;
+        h3{font-weight: lighter;color:$font-gray;font-size: 48px;letter-spacing: -3px;line-height: 84px;}
+        p{letter-spacing: -0.8px;line-height: 32px;}
+    }
+    .detail, .detail-rows{height: 500px;background:$light-gray;}
+    .detail-img{padding: 0px !important;}
+}
+
+table{border-collapse: collapse;width: 1055px;
+    caption{text-align: left;font-size: 28px;font-weight: bold;height: 70px;line-height: 70px;}
+    tr:first-child td{border-top:3px solid $gray;}
+    td{border-bottom: 1px solid $gray;}
+}
+
+#comment-box{
+    .rate-area{width: 166px;
+        .L2R{display: block;text-align: center;}
+        li{color:$main-light;font-size: 30px;
+            &:first-child{margin-left: 8px;}
+            &:last-child{margin-right: 8px;}
+        }
+        .rated{color:$main-vivid;}
+        div{text-align: center;color:$main-vivid;}
+        .rate{font-size: 32px;font-weight: bold;}
+        .user-id{font-size: 18px;}
+    }
+    .option{color:$font-gray;}
+    .comment{margin-top: 32px;}
+    tr{height: 160px;}
+}
+
+#qna{
+    .tr-title {
+        td{height: 60px;}
+        td:first-child{text-align: center;width: 100px;font-size: 18px;color:$font-gray;}
+        td:last-child{
+            &:before{content:"Q. ";font-weight: bold;}
+            &:after{content:" [답변완료]";color:$gray;font-size: 14px;padding-left: 10px;}
+            &.no-reply:after{content:" [답변대기중]";color:$main-light;}
+        }
+    }
+    .tr-qna{background: $light-gray;display: none;
+        &.active{display: table-row;}
+        td{box-sizing: border-box;padding: 20px;
+            & > div:before{width: 66px;}
+        }
+        h4{font-size: 28px;line-height: 48px;letter-spacing: -1px;}
+        p{font-size: 18px;letter-spacing: -0.8px;}
+        .q{
+            margin-bottom: 36px;
+            &:before{content:"Q.";font-size: 64px;color: $gray;margin-right: 30px;display: inline-block;}
+        }
+        .a{
+            &:before{content:"A.";font-size: 64px;color: $main-vivid;float: left;margin-right: 30px;display: inline-block;}
+        }
+        .txt-box{display: inline-block;width: 900px;}
+    }
+}
+.pager{text-align: center;
+    li{display: block;
+        a{font-size: 18px;}
+        &:after{content:"|";margin:0 16px;}
+        &:last-child:after{margin: 0;content: "";}
+        &.now{a{font-weight: bold;}}
+    }
+}
+
+.sidebar{display: sticky;top:100px;width: 345px;height: calc(100vh - 100px);background: $side-gray;box-shadow: $material-shadow;
+    h5{display: block;width: 321px;font-size: 18px;}
+    .wrap{position: relative;width: calc(100% - 24px);margin: 18px 12px;
+        li{display:flex;justify-content: space-around;align-items:center;align-content:flex-start;margin-bottom: 16px;
+        }
+    }
+    .color{
+        & > div{width: 58px; line-height: 46px; @include div-btn(16px, 58px, 0)}
+    }
+    .size{
+        & > div{
+            width: 85px;line-height: 30px;box-sizing: border-box;color:$main-light; border:2px solid $main-light;@include div-btn(18px, 70px,0);
+                &:hover{background: $main-light;}
+        }
+    }
+    .cart{height: 100px;background: $main-vivid;}
+    .direct_purchase{height: 100px;background: $sub-deep;} 
+    .btn-area {position: absolute;bottom: 0;width: 100%;
+        & > div:nth-child(n+2){text-align: center;font-weight: bold;line-height: 100px;}
+    }
+    a{@include link-fullsize;color:$white;font-size: 28px;vertical-align: middle;}
+    .bottom-price-area{text-align: left !important;padding: 24px;
+        .price{font-size: 48px;font-weight: bold;}
+        .shipping{font-size: 28px;color:$font-gray;
+            &:before{content:"+ USD ";}
+            &:after{content:" Shipping";}
+        }
+    }
+}

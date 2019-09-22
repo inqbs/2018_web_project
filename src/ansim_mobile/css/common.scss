@@ -1,0 +1,102 @@
+@import url(https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css); //나눔스퀘어 웹폰트
+
+@import "global"; //sass 정의요소
+
+// 공통 적용요소
+
+*{margin:0;padding:0;}
+head, body{font-family: $font-default;letter-spacing: $font-letter;}
+ul{list-style: none;}
+li{float:left;}
+a, a:hover, a:visited, a:active, a:focus{text-decoration: none;}
+.container{width: 1200px;margin: $div_align_center;padding:0;}
+
+//리스트 공통
+.li-default{display: block;}
+
+// 공통 적용요소 끝
+
+//header
+
+header{
+    background: linear-gradient(90deg, $main_deepBlue, #bc2a45);
+    .sub_menu{margin-top: 60px-28;
+        ul{float: right;
+            li{@include list-item-border(#fff, 12px,);}
+        }
+    }
+    .container:last-child{
+        line-height: 96px;
+        div{margin-bottom: 44px;height: 96px;display: inline-block;vertical-align: middle;}
+    };
+}
+.menu_area{
+    margin-left: 72px;
+    li{@extend .li-default;margin-right: 48px;
+        a{font-size: 1.5em;color:#fff;}
+        }
+}
+.search_area{float: right;}
+.searchBox{
+    display: inline-block; border-bottom:$border-1px #fff;line-height: 36px;
+    .searchBar{width: 280px;height: 30px;line-height: 18pt;font-size: 1em; background: none;border:none;vertical-align: middle;margin-bottom:6px;}
+    .schbtn{width: 18px;height: 18px;margin: 0;border: 0;background: none;color:#fff;cursor:pointer;line-height: 18pt;
+        img{width: 100%;height: 100%;vertical-align: middle;}
+    }
+}
+
+// End of Header
+
+// Footer
+
+.info_footer {height: 250px;
+    .info_box{float:left;width: calc(50% - 24px);
+        &:first-child{margin-right: 24px;}
+        &:last-child{margin-left: 24px;}
+    }
+    .title_area{display: inline-block;width: 100%;position: relative;
+        h3{display: inline-block;font-size: 2em;font-weight: Bold;letter-spacing: -2.5pt;margin: 30px 0 20px;}
+        .more_btn {position: absolute;right: 0;top:40px;
+            &:after{content:"+";margin-left: 5px;}
+            a{color:#000;}
+        }
+    border-bottom: 2px solid #000;
+    }
+    .board_area{
+        li{float:none;display: block;line-height: 40px;position: relative;
+            .date_txt{position: absolute;right: 0;}
+            a{color:#000;letter-spacing: -0.7px;}
+        }
+    }
+    .info_area{width: 50%;float:left;height: 120px;
+        h5{display: inline-block;font-size: 1.5em;margin-top: 20px;}
+        span{display: inline-block;line-height: 30px;}
+        .open_time {margin-left: 1.5em;color: $main_blue;}
+        .call{font-weight: bold;font-size: 2em;}
+        .subcall {color:#aaa;}
+    }
+}
+
+.address_footer{display: block;height: 200px;background: #eee;padding-top: 18px;line-height:18pt;letter-spacing: -0.5px;
+    .footer_menu{display: inline-block;
+        li{
+            @include list-item-border(#333, 7px,);
+        }
+    }
+    address{color:#aaa;line-height: 16pt;}
+    .mark_award{
+        li{margin-top: 10px;margin-left: 30px;line-height: 18px;
+            a{display: inline-block;font-size: 12px;color: #666;vertical-align: middle;}
+        }
+        li[class^="mark"]{background-repeat:no-repeat;background-size: contain;height:36px;
+            &:first-child{margin-left: 0;}
+        }
+        .mark_wa{background: url('../img/fot_mark_wa.png');padding-left: 60px;}
+        .mark_wiseuser{background: url('../img/fot_mark_wiseuuser.png');padding-left: 105px;}
+        .mark_isms{background: url('../img/fot_mark_isms.png');padding-left: 50px;}
+        .mark_awardsapp{background: url('../img/fot_mark_awardsapp.png');padding-left: 50px;}
+        .mark_awardswa{background: url('../img/fot_mark_awardswa.png');padding-left: 50px;}
+    }
+}
+
+// End of Footer

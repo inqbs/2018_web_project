@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Expansys Korea : 얼리어답터와 Gadget Fan을 위한 온라인 직구 스토어</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/item-list.css">
+    <link rel="stylesheet" href="css/sticky-state.css">
+    <script src="js/sticky-state.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+</head>
+<body>
+    <header>
+       <div class="container">
+            <div class="main_menu_area">
+                <div class="logo_area">
+                   <div class="logo_BG"><a href="index.html"></a></div>
+                    <ul class="main_menu">
+                      <li><a href="index.html"></a></li>
+                        <li><a href="smartphone.html">Cellphones</a></li>
+                        <li><a href="#">Tablet PC &amp; Laptop</a></li>
+                        <li><a href="wearable.html">Wearable Accessory</a></li>
+                        <li><a href="#">Audio</a></li>
+                        <li><a href="#">Camera</a></li>
+                        <li><a href="#">Others</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="right_area">
+                <div class="user_menu">
+                    <ul class="L2R">
+                        <li><a href="#">Sign in</a></li>
+                        <li><a href="#">Cart <span id="cart_item_no">(0)</span></a></li>
+                        <li><a href="#">Language  ▼</a></li>
+                    </ul>
+                </div>
+                <div class="searchbar_area">
+                    <span class="search_box">
+                        <input type="text" class="searchbar">
+                        <button class="schbtn" type="submit">
+                            <img src="img/search_icon.png" alt="검색">
+                        </button>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <div class="visual_box phone">
+        <div class="container">
+        </div>
+    </div>
+    
+    <div class="brand_box">
+        <div class="container">
+            <ul class="brand-list phone L2R">
+                <li><img src="img/smartphone/apple.png" alt=""></li>
+                <li><img src="img/smartphone/galaxy.png" alt=""></li>
+                <li><img src="img/smartphone/pixel.png" alt=""></li>
+                <li><img src="img/smartphone/huawei.png" alt=""></li>
+                <li><img src="img/smartphone/asusu.png" alt=""></li>
+                <li><img src="img/smartphone/oneplus.png" alt=""></li>
+                <li><img src="img/smartphone/mi.png" alt=""></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div id="section_box" class="container">
+        <nav class="subbar">
+            <div class="sub-search_box">
+                <input type="search" name="결과내검색" placeholder="결과내검색" id="item_search">
+            </div>
+            <section class="case on-stock">
+                <ul>
+                    <li>
+                        <h3>재고보유</h3>
+                    </li>
+                    <li class="md-checkbox">
+                        <input id="stock" type="checkbox">
+                        <label for="stock">재고있음</label>
+                    </li>
+                </ul>
+            </section>
+            <section class="case price">
+                <ul>
+                    <li>
+                        <h3>가격</h3>
+                    </li>
+                    <li class="md-checkbox">
+                        <input id="min-price" type="text"><span>~</span><input id="max-price" type="text">
+                    </li>
+                </ul>
+            </section>
+            <section class="case rom">
+                <ul>
+                    <li>
+                        <h3>저장용량</h3>
+                    </li>
+                    <li class="md-checkbox">
+                        <input id="rom16g" type="checkbox">
+                        <label for="rom16g">16GB 이하</label>
+                    </li>
+                    <li class="md-checkbox">
+                        <input id="rom32g" type="checkbox">
+                        <label for="rom32g">32GB</label>
+                    </li>
+                    <li class="md-checkbox">
+                        <input id="rom64g" type="checkbox">
+                        <label for="rom64g">64GB</label>
+                    </li>
+                    <li class="md-checkbox">
+                        <input id="rom128g" type="checkbox">
+                        <label for="rom128g">128GB</label>
+                    </li>
+                    <li class="md-checkbox">
+                        <input id="rom256g" type="checkbox">
+                        <label for="rom256g">256GB 이상</label>
+                    </li>
+                </ul>
+            </section>
+            <section class="case ram">
+                <ul>
+                    <li>
+                        <h3>RAM</h3>
+                    </li>
+                    <li class="md-checkbox">
+                        <input id="ram2g" type="checkbox">
+                        <label for="ram2g">2GB 이하</label>
+                    </li>
+                    <li class="md-checkbox">
+                        <input id="ram3g" type="checkbox">
+                        <label for="ram3g">3GB</label>
+                    </li>
+                    <li class="md-checkbox">
+                        <input id="ram4g" type="checkbox">
+                        <label for="ram4g">4GB</label>
+                    </li>
+                    <li class="md-checkbox">
+                        <input id="ram6g" type="checkbox">
+                        <label for="ram6g">6GB</label>
+                    </li>
+                    <li class="md-checkbox">
+                        <input id="ram8g" type="checkbox">
+                        <label for="ram8g">8GB 이상</label>
+                    </li>
+                </ul>
+            </section>
+            <section class="case usb-type">
+                <ul>
+                    <li>
+                        <h3>USB 타입</h3>
+                    </li>
+                    <li class="md-checkbox">
+                        <input id="apple" type="checkbox">
+                        <label for="apple">Lightning Cable</label>
+                    </li>
+                    <li class="md-checkbox">
+                        <input id="micro" type="checkbox">
+                        <label for="micro">Micro USB</label>
+                    </li>
+                    <li class="md-checkbox">
+                        <input id="type-c" type="checkbox">
+                        <label for="type-c">USB Type-C</label>
+                    </li>
+                </ul>
+            </section>
+            <section class="case others">
+                <ul>
+                    <li>
+                        <h3>기타옵션</h3>
+                    </li>
+                    <li class="md-checkbox">
+                        <input id="m-sd" type="checkbox">
+                        <label for="m-sd">Micro SD</label>
+                    </li>
+                    <li class="md-checkbox">
+                        <input id="3.5" type="checkbox">
+                        <label for="3.5">3.5mm 이어폰</label>
+                    </li>
+                    <li class="md-checkbox">
+                        <input id="nfc" type="checkbox">
+                        <label for="nfc">NFC</label>
+                    </li>
+                    <li class="md-checkbox">
+                        <input id="dual-sim" type="checkbox">
+                        <label for="dual-sim">Dual SIM</label>
+                    </li>
+                </ul>
+            </section>
+            <div class="search">
+                <a href="#" class="btn"><span>옵션 적용 재검색</span></a>
+            </div>
+        </nav>
+        <section class="item_list_area">
+            <header>
+                <span class="site-nav">HOME › CELLPHONE</span>
+                <span class="item-sort"><button><img src="img/sort-icon.png" alt=""></button><span>평점높은순</span><button><img src="img/tobottom.png" alt=""></button></span>
+                <a href="" class="btn"><span>상품비교</span></a>
+            </header>
+            <div class="row">
+                <ul class="item-list L2R">
+                       <!-- 1행-->
+                        <li><a href="item_oneplus6.html">
+                                <div class="item-photo"><img src="img/smartphone/oneplus6.png" alt=""></div>
+                                <div class="item-prodoct">
+                                    <h5>OnePlus6 (6GB RAM/128GB)</h5>
+                                </div>
+                                <div class="item-price no-sale"><span class="sale"></span><span class="price">636.32</span></div>
+                            </a></li>
+                        <li><a href="#">
+                                <div class="item-photo"><img src="img/smartphone/xperiaxz3.png" alt=""></div>
+                                <div class="item-prodoct">
+                                    <h5>Sony Xperia XZ3 Dual</h5>
+                                </div>
+                                <div class="item-price no-sale tba"><span class="sale"></span><span class="price">To Be Announced</span></div>
+                            </a></li>
+                        <li> 
+                          <a href="#">
+                               <div class="item-photo">
+                                   <img src="img/smartphone/nokia_8110.png" alt="">
+                               </div>
+                               <div class="item-prodoct">
+                                   <h5>Nokia 8110 4G Dual-SIM</h5>
+                               </div>
+                               <div class="item-price"><span class="sale">134.48</span><span class="price">85.16</span></div>
+                           </a>
+                       </li>
+                        <!-- 2행-->
+                       <li><a href="#">
+                                <div class="item-photo"><img src="img/smartphone/essential_phone.png" alt=""></div>
+                                <div class="item-prodoct">
+                                    <h5>Essential Phone (128GB Halo Black)</h5>
+                                </div>
+                                <div class="item-price"><span class="sale">499.99</span><span class="price">309.99</span></div>
+                            </a></li>
+                        <li><a href="#">
+                                <div class="item-photo"><img src="img/smartphone/xiaomi_redmi_n5.png" alt=""></div>
+                                <div class="item-prodoct">
+                                    <h5>Xiaomi Redmi Note 5 (64GB/Gold)</h5>
+                                </div>
+                                <div class="item-price no-sale"><span class="sale"></span><span class="price">205.37</span></div>
+                            </a></li>
+                        <li> 
+                          <a href="#">
+                               <div class="item-photo">
+                                   <img src="img/smartphone/lg_stylo4.png" alt="">
+                               </div>
+                               <div class="item-prodoct">
+                                   <h5>LG Stylo 4 (32GB/Aurora Black)</h5>
+                               </div>
+                               <div class="item-price"><span class="sale">299.99</span><span class="price">209.99</span></div>
+                           </a>
+                       </li>
+                       <!-- 3행-->
+                       <li><a href="#">
+                                <div class="item-photo"><img src="img/smartphone/galaxyn9.png" alt=""></div>
+                                <div class="item-prodoct">
+                                    <h5>Samsung Galaxy Note9 (128GB)</h5>
+                                </div>
+                                <div class="item-price"><span class="sale">1,079.99</span><span class="price">954.55</span></div>
+                            </a></li>
+                        <li><a href="#">
+                                <div class="item-photo"><img src="img/smartphone/nokia7plus.png" alt=""></div>
+                                <div class="item-prodoct">
+                                    <h5>Nokia 7 Plus Dual-SIM (64GB)</h5>
+                                </div>
+                                <div class="item-price no-sale"><span class="sale"></span><span class="price">286.29</span></div>
+                            </a></li>
+                        <li> 
+                          <a href="#">
+                               <div class="item-photo">
+                                   <img src="img/smartphone/blackberry_key2.png" alt="">
+                               </div>
+                               <div class="item-prodoct">
+                                   <h5>BlackBerry KEY2 (64GB)</h5>
+                               </div>
+                               <div class="item-price no-sale"><span class="sale"></span><span class="price">649.00</span></div>
+                           </a>
+                       </li>
+                </ul>
+            </div>
+            
+            <div class="row item_banner oneplus_banner">
+                <a href="item_oneplus6.html"></a>
+            </div>
+            
+            <div class="row">
+                <ul class="item-list L2R">
+                       <!-- 1행-->
+                        <li><a href="#">
+                                <div class="item-photo"><img src="img/smartphone/blu_vivo_XI.png" alt=""></div>
+                                <div class="item-prodoct">
+                                    <h5>BLU VIVO XI+ (64GB)</h5>
+                                </div>
+                                <div class="item-price"><span class="sale">349.99</span><span class="price">329.99</span></div>
+                            </a></li>
+                        <li><a href="#">
+                                <div class="item-photo"><img src="img/smartphone/huaweip20lite.png" alt=""></div>
+                                <div class="item-prodoct">
+                                    <h5>Huawei P20 Lite ANE-LX3</h5>
+                                </div>
+                                <div class="item-price no-sale"><span class="sale"></span><span class="price">262.95</span></div>
+                            </a></li>
+                        <li> 
+                          <a href="#">
+                               <div class="item-photo">
+                                   <img src="img/smartphone/galaxys9.png" alt="">
+                               </div>
+                               <div class="item-prodoct">
+                                   <h5>Samsung Galaxy S9 (Midnight)</h5>
+                               </div>
+                               <div class="item-price"><span class="sale">719.99</span><span class="price">619.99</span></div>
+                           </a>
+                       </li>
+                        <!-- 2행-->
+                       <li><a href="#">
+                                <div class="item-photo"><img src="img/smartphone/nokia6.1.png" alt=""></div>
+                                <div class="item-prodoct">
+                                    <h5>Nokia 6.1 (2018)</h5>
+                                </div>
+                                <div class="item-price"><span class="sale">269.55</span><span class="price">227.00</span></div>
+                            </a></li>
+                        <li><a href="#">
+                                <div class="item-photo"><img src="img/smartphone/motog6_play_deep.png" alt=""></div>
+                                <div class="item-prodoct">
+                                    <h5>Moto G6 Play Deep Indigo</h5>
+                                </div>
+                                <div class="item-price"><span class="sale">199.99</span><span class="price">189.00</span></div>
+                            </a></li>
+                        <li> 
+                          <a href="#">
+                               <div class="item-photo">
+                                   <img src="img/smartphone/moto_g6_black.png" alt="">
+                               </div>
+                               <div class="item-prodoct">
+                                   <h5>Moto G6 Black</h5>
+                               </div>
+                               <div class="item-price no-sale"><span class="sale"></span><span class="price">219.00</span></div>
+                           </a>
+                       </li>
+                       <!-- 3행-->
+                       <li><a href="#">
+                                <div class="item-photo"><img src="img/smartphone/nuu_mobile_g3.png" alt=""></div>
+                                <div class="item-prodoct">
+                                    <h5>NUU Mobile G3 (64GB)</h5>
+                                </div>
+                                <div class="item-price no-sale"><span class="sale"></span><span class="price">199.99</span></div>
+                            </a></li>
+                        <li><a href="#">
+                                <div class="item-photo"><img src="img/smartphone/blu_studio_x8.png" alt=""></div>
+                                <div class="item-prodoct">
+                                    <h5>BLU Studio X8 HD</h5>
+                                </div>
+                                <div class="item-price no-sale"><span class="sale"></span><span class="price">49.99</span></div>
+                            </a></li>
+                        <li> 
+                          <a href="#">
+                               <div class="item-photo">
+                                   <img src="img/smartphone/honor_7x.png" alt="">
+                               </div>
+                               <div class="item-prodoct">
+                                   <h5>Honor 7x</h5>
+                               </div>
+                               <div class="item-price no-sale"><span class="sale"></span><span class="price">210.00</span></div>
+                           </a>
+                       </li>
+                        <!-- 4행-->
+                       <li><a href="#">
+                                <div class="item-photo"><img src="img/smartphone/galaxy_j7.png" alt=""></div>
+                                <div class="item-prodoct">
+                                    <h5>Samsung Galaxy J7 Prime</h5>
+                                </div>
+                                <div class="item-price no-sale"><span class="sale"></span><span class="price">204.00</span></div>
+                            </a></li>
+                </ul>
+            </div>
+            
+            <div class="row morebtn">
+                <a href="#"><span>SHOW MORE</span></a>
+            </div>
+            
+        </section>
+    </div>
+    
+    <footer>
+        <div class="container">
+           <div class="logo_footer">
+                <img src="img/logo.png" alt="">
+            </div>
+            <div class="credit">
+                <ul class="L2R">
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#">전자금융거래약관</a></li>
+                    <li><a href="#">개인정보처리방침</a></li>
+                    <li><a href="#">청소년보호정책</a></li>
+                </ul><br />
+                <address>문의: Info@EXPANSYS.com     |     법인 고객용 문의: KR-GROUP@EXPANSYS.COM</address><br />
+                <span class="copyright">2018 EXPANSYS Limited</span>
+            </div>
+        </div>
+    </footer>
+    <script src="js/menu_slide.js"></script>
+</body>
+</html>

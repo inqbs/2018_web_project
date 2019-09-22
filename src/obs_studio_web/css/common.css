@@ -1,0 +1,52 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400&subset=latin,latin-ext);/* Roboto */
+@font-face {font-family: 'Noto Sans KR';font-style: normal;font-weight: 100;src: url(https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.woff2) format('woff2'),url(https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.woff) format('woff'),url(https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.otf) format('opentype');}@font-face {font-family: 'Noto Sans KR';font-style: normal;font-weight: 300;src: url(https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff2) format('woff2'),url(https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff) format('woff'),url(https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.otf) format('opentype');}@font-face {font-family: 'Noto Sans KR';font-style: normal;font-weight: 400;src: url(https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2) format('woff2'),url(https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff) format('woff'),url(https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf) format('opentype');}@font-face {font-family: 'Noto Sans KR';font-style: normal;font-weight: 500;src: url(https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.woff2) format('woff2'),url(https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.woff) format('woff'),url(https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.otf) format('opentype');}@font-face {font-family: 'Noto Sans KR';font-style: normal;font-weight: 700;src: url(https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff2) format('woff2'),url(https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff) format('woff'),url(https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.otf) format('opentype');}@font-face {font-family: 'Noto Sans KR';font-style: normal;font-weight: 900;src: url(https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.woff2) format('woff2'),url(https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.woff) format('woff'),url(https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.otf) format('opentype');} /*Noto Sans CJK KR*/
+
+body.fade-in{animation: fadeIn 1s ease 0s 1 normal;-webkit-animation: fadeIn 1s ease 0s 1 normal;}
+body.fade-out{animation: fadeOut 1s ease 0s 1 normal;-webkit-animation: fadeOut 1s ease 0s 1 normal;}
+@keyframes fadeIn {0% {opacity: 0}100% {opacity: 1}}
+@-webkit-keyframes fadeIn {0% {opacity: 0}100% {opacity: 1}}
+@keyframes fadeOut {0% {opacity: 1}100% {opacity: 0}}
+@-webkit-keyframes fadeOut {0% {opacity: 1}100% {opacity: 0}} /* Fade In/Out */
+
+*{margin: 0;padding: 0;font-family: 'Roboto Condensed', 'Noto Sans KR', sans-serif;}
+a, a:hover{text-decoration: none;}
+ul{list-style: none;}
+[class*="bn"]{box-sizing: border-box;box-shadow:0 2px 10px rgba(0,0,0,0.3);overflow: hidden;border-radius: 16px;margin-bottom: 30px;}
+.contain {width: 100%;}
+body{background: #333;letter-spacing: -0.3pt;}
+header {width: 95%;height:40px;margin: 0 auto;padding:30px 0;text-align: center;}
+.container{width: 95%;margin: 0 auto;}
+
+.logo{width: 25%;min-width:300px;float:left;text-align: left;}
+.logo img{width: 40px;height: 40px;margin-right: 20px;}
+.logo span{color:#fff;font-size: 1em;vertical-align: top;}
+.menu{margin:0 auto; text-align: center;width:50%;min-width:400px;float:left;}
+.menu ul{display:inline-table;}
+.menu ul li {float:left;padding:0 30px;text-align: center;}
+.menu a, .menu a:visited{color:white;font-size:1.2em;line-height:40px;}
+.lang_box{float:right;width: 25%;min-width:80px;max-width:100px;height: 40px;}
+.lang{display: block;height: 100%;line-height: 35px;font-size:0.9em;text-align: right;}
+.lang a, .lang a:hover{color:#fff;font-weight:normal;}
+.lang a:visited{color:#fff;}
+.lang_menu{display:none;z-index: 10;}
+.lang_menu li{background:#4e4e4e;text-align:center;}
+.lang_menu li:hover{background:#353535; transition: all 150ms 0s ease;}
+.lang_menu li:after{content:none;}
+.lang_menu li a:hover{color:#fff;}
+
+.bn-sm:before{content:"";display:block;position:absolute;width: 100%;height: 100%;top: 0;left: 0;background-color:rgba(0,0,0,0.4);transition: all 0.3s;
+    -webkit-transition: all 0.3s;opacity: 0;}
+.bn-sm:hover::before{opacity:1;}
+
+.bn-footer{height: 8vw;clear:both;background: #fff;padding:2vw;max-height:100px;}
+.footer-logo{width: 25%;min-width:300px;float:left;text-align: left;}
+.footer-logo img{width: 40px;height: 40px;margin-right: 20px;}
+.footer-logo span{color:#222;font-size: 1em;vertical-align: top;}
+.address-area{margin:0 auto;text-align: center;width:50%;min-width:350px;float:left;}
+address{display:inline-table;text-decoration: none;font-style:normal;font-size: 0.8em;}
+.social{float:right;height: 40px;padding-top: 8px;}
+.social-list{display: block;height: 100%;line-height: 35px;font-size:0.9em;text-align: right;float:right;}
+.social-list a, .social-list a:hover{color:#fff;font-weight:normal;}
+.social-list a:visited{color:#fff;}
+.social-list li{float: left;margin-left:20px;line-height: 23px;}
+.social-list img{width: 20px;height:auto;}
